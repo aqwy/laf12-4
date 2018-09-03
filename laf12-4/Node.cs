@@ -11,6 +11,7 @@ namespace laf12_4
         public int iData;
         public Node leftChild;
         public Node rightChild;
+        public Node() { }
         public Node (int key)
         {
             iData = key;

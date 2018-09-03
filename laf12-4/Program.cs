@@ -10,6 +10,8 @@ namespace laf12_4
     {
         static void Main(string[] args)
         {
+
+            Console.ReadLine();
         }
     }
 }
