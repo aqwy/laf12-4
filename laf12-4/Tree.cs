@@ -200,7 +200,7 @@ namespace laf12_4
             globalStack.Push(root);
             int nBlanks = 32;
             bool isRowEmpty = false;
-            Console.WriteLine("......................................................");
+            Console.WriteLine("..............................................................");
             while (isRowEmpty == false)
             {
                 Stack<object> localStack = new Stack<object>();
@@ -234,7 +234,40 @@ namespace laf12_4
                 while (localStack.Count != 0)
                     globalStack.Push(localStack.Pop());
             }
-            Console.WriteLine("......................................................");
+            Console.WriteLine("..............................................................");
+        }
+        public bool isEmpty()
+        {
+            return (root == null);
+        }
+        public Node removeMax()
+        {
+            Node grandParent = root;
+            Node parent = root;
+            Node current = root;
+
+            while (current != null)
+            {
+                grandParent = parent;
+                parent = current;
+                current = current.rightChild;
+            }
+            if (parent == root)
+                root = root.leftChild;
+            else
+                grandParent.rightChild = parent.leftChild;
+            return parent;
+        }
+        public Node peekMax()
+        {
+            Node parent = root;
+            Node current = root;
+            while (current != null)
+            {
+                parent = current;
+                current = current.rightChild;
+            }
+            return parent;
         }
     }
 }
