@@ -258,16 +258,5 @@ namespace laf12_4
                 grandParent.rightChild = parent.leftChild;
             return parent;
         }
-        public Node peekMax()
-        {
-            Node parent = root;
-            Node current = root;
-            while (current != null)
-            {
-                parent = current;
-                current = current.rightChild;
-            }
-            return parent;
-        }
     }
 }

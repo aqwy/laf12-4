@@ -8,7 +8,6 @@ namespace laf12_4
 {
     class priorityQ
     {
-        private int currentSize;
         private Tree theTree;
 
         public priorityQ(int size)
@@ -22,10 +21,6 @@ namespace laf12_4
         public int removeMaxVal()
         {
             return theTree.removeMax().iData;
-        }
-        public int peek()
-        {
-            return theTree.peekMax().iData;
         }
         public bool isEmpty()
         {
